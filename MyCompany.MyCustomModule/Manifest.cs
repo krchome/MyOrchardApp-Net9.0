@@ -6,5 +6,6 @@
     Website = "https://mycompany.com",
     Version = "1.0.0",
     Description = "A module that provides a custom content part.",
-    Category = "Content"
+    Category = "Content",
+    Dependencies = new[] { "OrchardCore.Contents" }
 )]
