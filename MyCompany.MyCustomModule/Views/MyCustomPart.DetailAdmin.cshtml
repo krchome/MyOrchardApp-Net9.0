@@ -1,0 +1,112 @@
+<<<<<<< HEAD
+﻿@model MyCompany.MyCustomModule.ViewModels.MyCustomPartViewModel
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer T
+
+<div class="properties">
+    <div class="related">
+        <h3>@T["My Custom Part Details"]</h3>
+        
+        <dl class="row">
+            <dt class="col-sm-3">@T["Summary"]:</dt>
+            <dd class="col-sm-9">
+                @if (!string.IsNullOrWhiteSpace(Model.Summary))
+                {
+                    <span>@Model.Summary</span>
+                }
+                else
+                {
+                    <em class="text-muted">@T["No summary provided"]</em>
+                }
+            </dd>
+            
+            <dt class="col-sm-3">@T["Featured"]:</dt>
+            <dd class="col-sm-9">
+                @if (Model.IsFeatured)
+                {
+                    <span class="badge bg-success">@T["Yes"]</span>
+                }
+                else
+                {
+                    <span class="badge bg-secondary">@T["No"]</span>
+                }
+            </dd>
+            
+            <dt class="col-sm-3">@T["Priority"]:</dt>
+            <dd class="col-sm-9">
+                <span class="badge bg-info">@Model.Priority</span>
+            </dd>
+            
+            @if (Model.PublishDate.HasValue)
+            {
+                <dt class="col-sm-3">@T["Publish Date"]:</dt>
+                <dd class="col-sm-9">@Model.PublishDate.Value.ToString("MMM dd, yyyy")</dd>
+            }
+            
+            @if (!string.IsNullOrWhiteSpace(Model.ExternalLink))
+            {
+                <dt class="col-sm-3">@T["External Link"]:</dt>
+                <dd class="col-sm-9">
+                    <a href="@Model.ExternalLink" target="_blank" rel="noopener noreferrer">
+                        @Model.ExternalLink <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </dd>
+            }
+        </dl>
+    </div>
+=======
+﻿@model MyCompany.MyCustomModule.ViewModels.MyCustomPartViewModel
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer T
+
+<div class="properties">
+    <div class="related">
+        <h3>@T["My Custom Part Details"]</h3>
+        
+        <dl class="row">
+            <dt class="col-sm-3">@T["Summary"]:</dt>
+            <dd class="col-sm-9">
+                @if (!string.IsNullOrWhiteSpace(Model.Summary))
+                {
+                    <span>@Model.Summary</span>
+                }
+                else
+                {
+                    <em class="text-muted">@T["No summary provided"]</em>
+                }
+            </dd>
+            
+            <dt class="col-sm-3">@T["Featured"]:</dt>
+            <dd class="col-sm-9">
+                @if (Model.IsFeatured)
+                {
+                    <span class="badge bg-success">@T["Yes"]</span>
+                }
+                else
+                {
+                    <span class="badge bg-secondary">@T["No"]</span>
+                }
+            </dd>
+            
+            <dt class="col-sm-3">@T["Priority"]:</dt>
+            <dd class="col-sm-9">
+                <span class="badge bg-info">@Model.Priority</span>
+            </dd>
+            
+            @if (Model.PublishDate.HasValue)
+            {
+                <dt class="col-sm-3">@T["Publish Date"]:</dt>
+                <dd class="col-sm-9">@Model.PublishDate.Value.ToString("MMM dd, yyyy")</dd>
+            }
+            
+            @if (!string.IsNullOrWhiteSpace(Model.ExternalLink))
+            {
+                <dt class="col-sm-3">@T["External Link"]:</dt>
+                <dd class="col-sm-9">
+                    <a href="@Model.ExternalLink" target="_blank" rel="noopener noreferrer">
+                        @Model.ExternalLink <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </dd>
+            }
+        </dl>
+    </div>
+>>>>>>> 5cde5b2 (Add Drivers and Models to version control)
+</div>

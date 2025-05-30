@@ -1,0 +1,24 @@
+﻿@model MyCompany.MyCustomModule.Models.MyCustomPart
+@*
+This view is typically rendered by a shape with a type like 'MyCustomPart'.
+Orchard Core will look for a view named MyCustomPart.cshtml.
+*@
+
+@if (!string.IsNullOrWhiteSpace(Model.CustomData) || Model.Importance.HasValue)
+{
+    <div>
+        <h4>My Custom Part Details:</h4>
+        @if (!string.IsNullOrWhiteSpace(Model.CustomData))
+        {
+            <p><strong>Custom Information:</strong> @Model.CustomData</p>
+        }
+        @if (Model.Importance.HasValue)
+        {
+            <p><strong>Level of Importance:</strong> @Model.Importance.Value</p>
+        }
+    </div>
+}
+else
+{
+    @* Optionally render nothing or a placeholder if there's no data *@
+}
