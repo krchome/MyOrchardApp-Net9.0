@@ -14,6 +14,12 @@
 		<PackageReference Include="OrchardCore.ContentTypes.Abstractions" Version="2.1.7" />
 		<PackageReference Include="OrchardCore.Data.Abstractions" Version="2.1.7" />
 		<PackageReference Include="OrchardCore.Autoroute" Version="2.1.7" />
+		<PackageReference Include="OrchardCore.ContentFields" Version="2.1.7" />
+
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Drivers\" />
 	</ItemGroup>
 
 </Project>
